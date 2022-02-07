@@ -25,6 +25,7 @@ module "ct_management_exec_role" {
   providers = {
     aws = aws.ct_management
   }
+  role_name = "AWSAFTExecution4"
   trusted_entity = aws_iam_role.aft_admin_role.arn
 }
 
@@ -33,6 +34,7 @@ module "log_archive_exec_role" {
   providers = {
     aws = aws.log_archive
   }
+  role_name = "AWSAFTExecution1"
   trusted_entity = aws_iam_role.aft_admin_role.arn
 }
 
@@ -41,6 +43,7 @@ module "audit_exec_role" {
   providers = {
     aws = aws.audit
   }
+  role_name = "AWSAFTExecution2"
   trusted_entity = aws_iam_role.aft_admin_role.arn
 }
 
@@ -49,5 +52,6 @@ module "aft_exec_role" {
   providers = {
     aws = aws.aft_management
   }
+  role_name = "AWSAFTExecution3"
   trusted_entity = aws_iam_role.aft_admin_role.arn
 }

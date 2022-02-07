@@ -10,6 +10,6 @@ resource "aws_kms_key" "aft_log_key" {
 resource "aws_kms_alias" "aft_log_key_alias" {
   provider = aws.log_archive
 
-  name          = "alias/aft"
+  name          = "alias/aft1"
   target_key_id = aws_kms_key.aft_log_key.key_id
 }
